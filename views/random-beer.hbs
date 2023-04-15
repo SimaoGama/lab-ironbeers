@@ -1,12 +1,19 @@
 <ul>
-  {{#each response}}
-    <li>
-      <img src='{{image_url}}' alt='' />
-      {{name}}
-      {{description}}
-      {{tagline}}
+  {{#each randomBeer}}
+    {{> beerpartials}}
+    <p>
+      <b>
+        Best with:
+      </b>
       {{food_pairing}}
-      {{brewers_tips}}
-    </li>
+      <br />
+    </p>
+    <ol>
+      <li>
+        Brewer tip:
+        {{brewers_tips}}
+      </li>
+    </ol>
+
   {{/each}}
 </ul>
